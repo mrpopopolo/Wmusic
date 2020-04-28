@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>FEif musics</title>
+  </head>
+  <body>
+  	<form method="post" th:action="@{/addMusics}" enctype="multipart/form-data">
+		<div>Music:<input type="file" name="music"/></div>
+		<div>Epic Music:<input type="file" name="epicMusic"/></div>
+		<button type="submit">Send</button>
+	</form>
+  </body>
+ </html>

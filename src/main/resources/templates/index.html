@@ -1,0 +1,21 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>FEif musics</title>
+  </head>
+  <body>
+    <div>
+    	<a th:href="@{/newMusic}">Add a new music</a>
+    </div>
+    <div>
+	    Listen to a music:
+	    <form method="post" th:action="@{/player}">
+		    <select name="choice">
+		    	<option th:each="music: ${musics}" th:value="${music}" th:text="${music}"></option>
+		    </select>
+		    <button type="submit">Eargasm</button>
+	    </form>
+    </div>
+  </body>
+ </html>
